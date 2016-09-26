@@ -10,8 +10,9 @@ Some of the few testing APIs is supports:
 
  
 To run:
-cd app
-python -m SimpleHTTPServer 8000 
+
+1. cd app
+2. python -m SimpleHTTPServer 8000 
 
 
 Alternatively grunt serve
