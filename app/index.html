@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport"   content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+        <title>Khan Academy</title>
+        <link rel="stylesheet"  href="build/css/main.css">
+
+    </head>
+
+    <body>
+        <div id="editor"></div>	
+        <div id="content">
+        	<div id="feedBack"></div>	
+        	<div id="setTest"></div>	
+			<img src="build/img/ajax_loader.gif" id="ajaxLoader">        
+        </div>	        
+        
+        <script id="result-template" type="text/x-handlebars-template"> 
+		<h4>Test Results</h4>
+		{{#if whiteList}}
+		<div>	
+			<h5>White List</h5>
+			<ul>
+       			{{#each whiteList}}
+  					<li class="{{result}}">{{name}} has {{#ifCond result 'fail'}} not {{/ifCond}} been used</li>
+  				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+		{{#if blackList}}
+		<div>	
+			<h5>Black List</h5>
+			<ul>
+       			{{#each blackList}}
+  					<li class="{{result}}">{{name}} has {{#ifCond result 'success'}} not {{/ifCond}} been used</li>
+  				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+		{{#if structure}}
+		<div>	
+			<h5>Structure</h5>
+			<ul>
+       			{{#each structure}}
+  					<li class="{{result}}">{{name}} {{#ifCond result 'fail'}} not {{/ifCond}} matched</li>
+  				{{/each}}
+			</ul>
+		</div>
+		{{/if}}
+		</script>
+			       
+		<script id="setting-template" type="text/x-handlebars-template"> 
+		<div>	
+				<h4>Set Tests</h4>
+			<h6>White List</h6>
+				{{#each whiteList}}
+  					<input type="text" name="whiteList" class="whiteList" value={{this}}>
+  				{{/each}}
+			<h6>Black List</h6>
+				{{#each blackList}}
+  					<input type="text" name="blackList" class="blackList" value={{this}}>
+  				{{/each}}
+			<h6>Structure</h6>
+				{{#each structure}}
+  					<textArea name="structure" class="structure">{{this}}</textArea>
+  				{{/each}}
+			<button id="submit">Submit</button>
+		</div>		
+		</script>	
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="build/js/ace.js"></script>
+		<script type="text/javascript" src="build/js/lib.min.js"></script>	
+        <script type="text/javascript" src="build/js/validator.min.js"></script>
+        <script type="text/javascript" src="build/js/script.min.js"></script>
+
+    </body>
+
+</html>

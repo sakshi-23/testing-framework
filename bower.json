@@ -1,0 +1,27 @@
+{
+  "name": "y",
+  "description": "studying code structure",
+  "main": "index.html",
+  "authors": [
+    "Sakshi Pratap"
+  ],
+  "license": "MIT",
+  "moduleType": [
+    "globals"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ace": "~1.2.2",
+    "ace-builds": "~1.2.2",
+    "esprima": "~2.0.0",
+    "handlebars": "~4.0.5"
+  }
+}
