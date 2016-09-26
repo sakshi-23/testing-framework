@@ -4,9 +4,9 @@ The application can be use to inspect JavaScript code and determine if certain a
 
 Some of the few testing APIs is supports:
 
-A whitelist of specific functionality. For example, the ability to say "This program MUST use a 'for loop' and a 'variable declaration'."
-A blacklist of specific functionality. For example, the ability to say "This program MUST NOT use a 'while loop' or an 'if statement'."
-Determine the rough structure of the program. For example, "There should be a 'for loop' and inside of it there should be an 'if statement'."
+1. A whitelist of specific functionality. For example, the ability to say "This program MUST use a 'for loop' and a 'variable declaration'."
+2. A blacklist of specific functionality. For example, the ability to say "This program MUST NOT use a 'while loop' or an 'if statement'."
+3. Determine the rough structure of the program. For example, "There should be a 'for loop' and inside of it there should be an 'if statement'."
 
  
 To run:
